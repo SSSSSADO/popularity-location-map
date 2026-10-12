@@ -27,8 +27,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    "rest-framework",
-    "django-filters",
+    "rest_framework",
+    "django_filters",
 
     "location",
     "review",
@@ -76,6 +76,7 @@ DATABASES = {
         "PASSWORD": os.getenv("DB_PASSWORD", "location_password"),
         "HOST": os.getenv("DB_HOST", "127.0.0.1"),
         "PORT": os.getenv("DB_PORT", "5432"),
+        "LOCATION": os.getenv("REDIS_URL","redis://127.0.0.1:6379/1"),
     }
 }
 
