@@ -24,7 +24,7 @@ class Location(models.Model):
         on_delete=models.PROTECT,
         related_name="locations"
     )
-    adress = models.CharField(max_length=255)
+    address = models.CharField(max_length=255)
     latitude = models.DecimalField(
         max_digits=9,
         decimal_places=6,
@@ -48,7 +48,7 @@ class Location(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    is_deleted = models.BooleanField()
+    is_deleted = models.BooleanField(default=False)
 
     class Meta:
         verbose_name_plural = "locations"
